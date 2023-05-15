@@ -1,0 +1,8 @@
+* source INVERSEURPARFAIT
+R_R1         N14417 N14379  1k TC=0,0 
+R_R2         N14379 N14360  5k TC=0,0 
+X_U1         N14379 0 N14360 -10 +10 Ampli_parfait  params: Ao=30E3 
+V_V2         +10 0 10Vdc
+V_V3         -10 0 -10Vdc
+V_V4         N14417 0  AC 1
++SIN 0 0.1 50 0 0 0

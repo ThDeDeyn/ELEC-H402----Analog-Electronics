@@ -1,0 +1,482 @@
+
+**** 02/19/16 15:41:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\LABO\DESKTOP\ELEC-H402\CAO\ampi-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1u 0 1n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPI
+V_VDD         VDD 0 2.5V
+V_VSS         0 VSS 2.5V
+M_M1         N00263 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         N00555 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+R_R1         N00263 VDD  39k TC=0,0 
+M_M3         N01628 IN- N00555 N00555 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M4         OUT1 IN+ N00555 N00555 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M5         N01628 N01628 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M6         OUT1 N01628 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M7         IN- N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M8         IN- OUT1 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+V_Vin         IN+ 0  AC 1
++PULSE 0 10m 0 10n 10n 1m 10m
+R_R2         IN- IN-  99Meg TC=0,0 
+R_R3         0 IN-  1Meg TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/19/16 15:41:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\LABO\DESKTOP\ELEC-H402\CAO\ampi-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ncg             pcg             
+               NMOS            PMOS            
+       LEVEL    2               2            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD    1.600000E-06  960.000000E-09 
+          WD    1.050000E-06  500.000000E-09 
+         VTO     .75            -.74         
+          KP   40.809880E-06   16.323950E-06 
+       GAMMA    1.09             .58         
+         PHI     .7              .7          
+      LAMBDA    0               0            
+         RSH   10              90            
+          IS   10.000000E-15   10.000000E-15 
+          JS   20.000000E-06   20.000000E-06 
+          PB     .9              .9          
+        PBSW     .9              .9          
+          CJ  390.000000E-06  180.000000E-06 
+        CJSW  264.000000E-12  322.000000E-12 
+          MJ                     .57         
+        MJSW     .18                         
+        CGSO  940.000000E-12  310.000000E-12 
+        CGDO  590.000000E-12  390.000000E-12 
+        CGBO  138.000000E-12  138.000000E-12 
+        NSUB   10.000000E+15   10.000000E+15 
+         NSS   70.000000E+09  100.000000E+09 
+         NFS  117.000000E+09  106.000000E+09 
+         TOX   55.000000E-09   55.000000E-09 
+          XJ    2.000000E-06    1.200000E-06 
+          UO  650             260            
+       UCRIT    7.000000E+03   10.000000E+03 
+        UEXP     .1              .16         
+        VMAX  160.000000E+03  300.000000E+03 
+        NEFF   10                            
+         XQC     .42             .42         
+          KF   75.000000E-30   75.000000E-30 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 02/19/16 15:41:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\LABO\DESKTOP\ELEC-H402\CAO\ampi-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    0.0000  (  IN-)    -.0054  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)     .8755  (N00263)   -1.0752 (N00555)   -1.1880 (N01628)    1.1722 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -2.782E-04
+    V_VSS       -2.782E-04
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.39E-03  WATTS
+
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  192.6E-09.
+         Time step =  262.4E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    M_M1      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6452  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2901  (N00263)   -1.1056 (N00555)    -.6620 (N01628)    1.1960 
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-006
+**** Param: TMAX = 1e-009
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  192.6E-09.
+         Time step =  262.4E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    M_M1      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6452  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2901  (N00263)   -1.1056 (N00555)    -.6620 (N01628)    1.1960 
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-006
+**** Param: TMAX = 1e-009
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 1
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+Convergence problem in transient analysis at Time =  192.6E-09
+         Time step =  262.4E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    M_M1      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6452  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2901  (N00263)   -1.1056 (N00555)    -.6620 (N01628)    1.1960 
+
+Resuming Simulation with the following settings
+ITL4 = 354
+ABSTOL = 1.41e-009
+
+Convergence problem in transient analysis at Time =  192.6E-09
+         Time step =  524.8E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT1)                   =     2.287V  \     2.290V
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -177.93uA  \  -145.19uA
+    I(V_VSS)                  =  -177.92uA  \  -203.42uA
+    I(V_Vin)                  =   654.10nA  \   -57.58uA
+
+  These devices failed to converge:
+    M_M4      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6453  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2867  (N00263)   -1.1056 (N00555)    -.6623 (N01628)    1.1957 
+
+Resuming Simulation with the following settings
+ITL4 = 354
+ABSTOL = 2e-006
+
+Convergence problem in transient analysis at Time =  192.6E-09
+         Time step =  524.8E-21, minimum allowable step size =  1.000E-18
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6452  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2901  (N00263)   -1.1056 (N00555)    -.6620 (N01628)    1.1960 
+
+Resuming Simulation with the following settings
+ITL4 = 1000
+
+Convergence problem in transient analysis at Time =  192.6E-09
+         Time step =  524.8E-21, minimum allowable step size =  1.000E-18
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)     .0100  (  IN-)    -.6452  (  VDD)    2.5000  (  VSS)   -2.5000      
+
+( OUT1)    2.2901  (N00263)   -1.1056 (N00555)    -.6620 (N01628)    1.1960 
+
+Resuming could not converge the circuit, restarting it now
+
+  These voltages failed to converge:
+
+    V(N00263)                 =    -1.106V  \    -1.106V
+    V(N00555)                 =  -662.32mV  \  -662.03mV
+    V(N01628)                 =     1.196V  \     1.196V
+    V(IN-)                    =  -645.26mV  \  -645.23mV
+    V(OUT1)                   =     2.287V  \     2.290V
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -177.93uA  \  -145.19uA
+    I(V_VSS)                  =  -177.93uA  \  -203.42uA
+    I(V_Vin)                  =   646.14nA  \   -57.58uA
+
+  These devices failed to converge:
+    M_M1      M_M2      M_M3      M_M4      M_M5      M_M6      M_M7      
+    M_M8      
+
+INTERNAL ERROR -- Divide by Zero, Divide
+
+ABORTING SIMULATION
+**** 02/19/16 15:41:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\LABO\DESKTOP\ELEC-H402\CAO\ampi-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           9
+  External (NCNODS)                 =           9
+  Total (NUMNOD)                    =          41
+
+Total device count (NUMEL)          =          14
+  MosFETs (M)                       =           8
+  Resistors (R)                     =           3
+  Voltage Sources (V)               =           3
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          44
+  Initial no. elements (NTTAR)      =         208
+  No. elements w/ fillin (NTTBR)    =         250
+  No. fillins (IFILL)               =          42
+  No. overflows (NTTOV)             =          31
+  No. LU operations (IOPS)          =        2101
+  Percent sparsity (PERSPA)         =      87.087
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =         293
+  No. rejected time points (NUMRTP) =          46
+  No. iterations (NUMNIT)           =        4378
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =         .06
+  Matrix solution                   =         .03               3
+  Readin                            =        0.00
+  General setup                     =         .02
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00              15
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time (using Solver 1)   =       16.07
+

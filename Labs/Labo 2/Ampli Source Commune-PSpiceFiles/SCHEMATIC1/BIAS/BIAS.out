@@ -1,0 +1,531 @@
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/libraries for elec-h402/libraries for elec-h402/sedra_l"
++ "ib.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 500us 0 0.5us 
+.FOUR 10k 5 V([OUT]) 
+.STEP DEC PARAM Vin 10mV 3.16V 2 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SOURCE COMMUNE
+V_VDD         VDD 0 10V
+R_RD         OUT VDD 33k
+R_R1         N14456 VDD 7.69meg
+R_R2         0 N14456 2.31meg
+V_V1         IN 0  AC 1V
++SIN 0 {Vin} 10kHz 0 0 0
+C_C1         N14456 IN 900p TC=0
+C_C2         OUT N18848  900u  TC=0,0 
+R_RL         0 N18848  {RLval} TC=0,0 
+V_VGS         N20556 0 2.3V
+M_M2         VDD N20556 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+M_M1         OUT N14456 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+.PARAM  vin=1v rlval=1000meg
+
+**** RESUMING BIAS.cir ****
+.END
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS5P0         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+          LD  700.000000E-09 
+         VTO    1            
+          KP   30.468920E-06 
+       GAMMA    1.4          
+         PHI     .7          
+      LAMBDA     .01         
+          IS   10.000000E-15 
+          JS    1.000000E-06 
+          PB     .7          
+        PBSW     .7          
+          CJ  400.000000E-06 
+        CJSW  800.000000E-12 
+        MJSW     .5          
+        CGSO  400.000000E-12 
+        CGDO  400.000000E-12 
+        CGBO  200.000000E-12 
+         TOX   85.000000E-09 
+          XJ    0            
+          UO  750            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .01  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .01  
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   6.8009E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   4.7404E-02   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   8.0013E-05   1.6879E-03   8.8577E+01   4.4744E+02
+     3    3.0000E+04   2.3923E-06   5.0466E-05   3.1028E+00   5.4140E+02
+     4    4.0000E+04   1.7999E-06   3.7969E-05   3.1687E+00   7.2089E+02
+     5    5.0000E+04   1.4085E-06   2.9713E-05   5.9092E+00   9.0306E+02
+
+
+     TOTAL HARMONIC DISTORTION =   1.6894E-01 PERCENT
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .0316
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .0316
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   6.8010E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   1.4988E-01   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   7.9940E-04   5.3335E-03   9.0338E+01   4.4920E+02
+     3    3.0000E+04   6.3118E-06   4.2111E-05   2.5477E+00   5.4084E+02
+     4    4.0000E+04   5.6220E-06   3.7509E-05   3.5162E+00   7.2124E+02
+     5    5.0000E+04   4.4474E-06   2.9672E-05   4.5631E+00   9.0172E+02
+
+
+     TOTAL HARMONIC DISTORTION =   5.3338E-01 PERCENT
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .1   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .1   
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   6.7962E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   4.7371E-01   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   7.9921E-03   1.6871E-02   9.0885E+01   4.4975E+02
+     3    3.0000E+04   1.4158E-05   2.9888E-05  -1.7828E+02   3.6001E+02
+     4    4.0000E+04   1.7768E-05   3.7507E-05   3.8594E+00   7.2158E+02
+     5    5.0000E+04   1.4144E-05   2.9859E-05   4.2103E+00   9.0136E+02
+
+
+     TOTAL HARMONIC DISTORTION =   1.6871E+00 PERCENT
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .3162
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =     .3162
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   6.7320E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   1.4931E+00   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   7.9861E-02   5.3485E-02   9.1059E+01   4.4992E+02
+     3    3.0000E+04   1.1155E-03   7.4710E-04  -1.7811E+02   3.6019E+02
+     4    4.0000E+04   6.1398E-05   4.1120E-05   2.5912E+01   7.4364E+02
+     5    5.0000E+04   4.4233E-05   2.9624E-05   3.2100E+00   9.0037E+02
+
+
+     TOTAL HARMONIC DISTORTION =   5.3490E+00 PERCENT
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =    1     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =    1     
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   6.1507E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   4.3973E+00   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   6.0348E-01   1.3724E-01   9.1110E+01   4.4997E+02
+     3    3.0000E+04   1.9170E-01   4.3594E-02  -1.7829E+02   3.6001E+02
+     4    4.0000E+04   1.2004E-01   2.7298E-02   9.2174E+01   8.0990E+02
+     5    5.0000E+04   7.8756E-02   1.7910E-02   2.8231E+00   8.9998E+02
+
+
+     TOTAL HARMONIC DISTORTION =   1.4765E+01 PERCENT
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =    3.1623
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    6.8006  (  VDD)   10.0000  (N14456)    2.3100     
+
+(N18848)    0.0000 (N20556)    2.3000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.963E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   1.96E-03  WATTS
+
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN =    3.1623
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   5.6235E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   5.7580E+00   1.0000E+00  -1.7943E+02   0.0000E+00
+     2    2.0000E+04   4.8099E-01   8.3535E-02   9.1114E+01   4.4998E+02
+     3    3.0000E+04   1.5394E+00   2.6735E-01  -1.7830E+02   3.6000E+02
+     4    4.0000E+04   3.0327E-01   5.2669E-02   9.2212E+01   8.0995E+02
+     5    5.0000E+04   6.6548E-01   1.1557E-01  -1.7717E+02   7.2000E+02
+
+
+     TOTAL HARMONIC DISTORTION =   3.0755E+01 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 03/17/23 11:49:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM VIN =    3.1623
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .19
+

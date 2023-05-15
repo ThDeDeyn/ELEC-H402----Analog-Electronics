@@ -1,0 +1,175 @@
+(ExpressProject "AmpliDiff"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "amplidiff.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\amplidiff-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SMALL_SIGNAL.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SMALL_SIGNAL.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SEDRA_LIB.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SEDRA_LIB.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ELEC-H402.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ELEC-H402.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ALD.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ALD.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidiff-pspicefiles\schematic1\bias.sim"
+        (DisplayName "SCHEMATIC1-bias")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\amplidiff-pspicefiles\schematic1\amplidiff.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidiff-pspicefiles\schematic1\amplidiff.sim"
+        (DisplayName "SCHEMATIC1-AmpliDiff")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (NMOS
+      (FullPartName "NMOS.Normal")
+      (LibraryName
+         "C:\USERS\LABO\DESKTOP\ELEC-H402\LIBRARIES FOR ELEC-H402\ALD.OLB")
+      (DeviceIndex "0"))
+    (PMOS
+      (FullPartName "PMOS.Normal")
+      (LibraryName
+         "C:\USERS\LABO\DESKTOP\ELEC-H402\LIBRARIES FOR ELEC-H402\ALD.OLB")
+      (DeviceIndex "0"))
+    (NMOS0P5
+      (FullPartName "NMOS0P5.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (DeviceIndex "0"))
+    (PMOS0P5
+      (FullPartName "PMOS0P5.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2013-2014\LABOS\LIBRARIES FOR ELEC-H402\SEDRA_LIB.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IAC
+      (FullPartName "IAC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\PM\Documents PM\Cours\_Analogique\ELEC-H-402 2013-2014\Labos\Libraries for ELEC-H402")
+  (MPSSessionName "thoma")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDiff\amplidiff.dsn")
+      (Path "Design Resources"
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDiff\amplidiff.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 476"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 102 1432 78 391")
+        (Scroll "-156 23")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\POLYTECH\MA1 2022-2023 ULB\Q2\ELEC-H402 -- ANALOG ELECTRONICS\LABS\LABO 4 - PROJETS\AMPLIDIFF\AMPLIDIFF.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

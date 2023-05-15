@@ -1,0 +1,97 @@
+
+**** 03/10/23 10:36:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliR"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 1 inverseur et filtre\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AmpliR.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/libraries for elec-h402/libraries for elec-h402/elec-h4"
++ "02.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 .2s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIREEL
+X_U1         0 N14601 N14535 +12 -12 Ampli_reel  params: Ao=30E3 eo=5mV ip=65pA
++  im=35pA Rid=1.5T Ro=100 
+V_V1         +12 0 +12V
+V_V2         -12 0 -12V
+R_R1         N14601 N14535  5k TC=0,0 
+R_R2         N14622 N14601  1k TC=0,0 
+V_V3         N14622 0  AC 1
++SIN 0 .1 50 0 0 0
+
+**** RESUMING AmpliR.cir ****
+.END
+
+**** 03/10/23 10:36:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliR"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 1 inverseur et filtre\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +12)   12.0000  (  -12)  -12.0000  (N14535)     .0300 (N14601)     .0050     
+
+(N14622)    0.0000 (X_U1.1)     .0050 (X_U1.N1) 999.8E-09                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         4.999E-06
+    X_U1.V_eo    6.500E-11
+
+    TOTAL POWER DISSIPATION  -3.25E-13  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/10/23 10:36:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliR"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 1 inverseur et filtre\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

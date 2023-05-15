@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CD4022")(type "KiCad")(uri "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Labo 6/Composants/cd4022be.kicad_sym")(options "")(descr ""))
+  (lib (name "USB")(type "KiCad")(uri "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Labo 6/Composants/USB_breakout.kicad_sym")(options "")(descr ""))
+)

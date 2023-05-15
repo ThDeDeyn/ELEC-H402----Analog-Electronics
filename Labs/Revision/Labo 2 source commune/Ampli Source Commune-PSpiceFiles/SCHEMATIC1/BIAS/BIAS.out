@@ -1,0 +1,160 @@
+
+**** 03/31/14 13:28:09 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ C:\Users\labo\Desktop\402pm\Labo 3 MOS1\ampli source commune-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/labo/Desktop/402/Libraries for ELEC-H402/SEDRA_LIB.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SOURCE COMMUNE
+V_VDD         VDD 0 10V
+R_RD         OUT VDD 33K
+R_R1         N14456 VDD 1Meg
+R_R2         0 N14456 3Meg
+V_V1         IN 0  AC 1V
++SIN 0 {Vin} 10kHz 0 0 0
+C_C1         N14456 IN 900p TC=0
+C_C2         VDD N18848  100u  TC=0,0 
+R_RL         0 N18848  {RLval} TC=0,0 
+V_VGS         N20556 0 1V
+M_M2         VDD N20556 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+M_M1         OUT N14456 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+.PARAM  vin=1v rlval=1000meg
+
+**** RESUMING BIAS.cir ****
+.END
+
+**** 03/31/14 13:28:09 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ C:\Users\labo\Desktop\402pm\Labo 3 MOS1\ampli source commune-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS5P0         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+          LD  700.000000E-09 
+         VTO    1            
+          KP   30.468910E-06 
+       GAMMA    1.4          
+         PHI     .7          
+      LAMBDA     .01         
+          IS   10.000000E-15 
+          JS    1.000000E-06 
+          PB     .7          
+        PBSW     .7          
+          CJ  400.000000E-06 
+        CJSW  800.000000E-12 
+        MJSW     .5          
+        CGSO  400.000000E-12 
+        CGDO  400.000000E-12 
+        CGBO  200.000000E-12 
+         TOX   85.000000E-09 
+          XJ    0            
+          UO  750            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 03/31/14 13:28:09 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ C:\Users\labo\Desktop\402pm\Labo 3 MOS1\ampli source commune-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .4342  (  VDD)   10.0000  (N14456)    7.5000     
+
+(N18848)    0.0000 (N20556)    1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -2.924E-04
+    V_V1         0.000E+00
+    V_VGS        0.000E+00
+
+    TOTAL POWER DISSIPATION   2.92E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/31/14 13:28:09 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ C:\Users\labo\Desktop\402pm\Labo 3 MOS1\ampli source commune-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

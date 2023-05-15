@@ -1,0 +1,3898 @@
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
++ "" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ELEC-H4"
++ "02.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SEDRA_L"
++ "IB.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SMALL_S"
++ "IGNAL.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 1G
+.STEP LIN V_V4 2 3 10m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SC CMOS
+V_V1         VDD 0 5
+V_V2         0 VSS 5
+R_RD1         N23093 VDD  {RD1} TC=0,0 
+M_M1         N23093 N23093 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         OUT N23093 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M3         OUT IN VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+V_V3         IN N276751 DC 0Vdc AC 0Vac 
+V_V4         N276751 0 {VG}
+.PARAM  rd1=33.6k vg=2.74
+
+**** RESUMING dc.cir ****
+.END
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ncg             pcg             
+               NMOS            PMOS            
+       LEVEL    2               2            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD    1.600000E-06  960.000000E-09 
+          WD    1.050000E-06  500.000000E-09 
+         VTO     .75            -.74         
+          KP   40.809880E-06   16.323950E-06 
+       GAMMA    1.09             .58         
+         PHI     .7              .7          
+      LAMBDA    0               0            
+         RSH   10              90            
+          IS   10.000000E-15   10.000000E-15 
+          JS   20.000000E-06   20.000000E-06 
+          PB     .9              .9          
+        PBSW     .9              .9          
+          CJ  390.000000E-06  180.000000E-06 
+        CJSW  264.000000E-12  322.000000E-12 
+          MJ                     .57         
+        MJSW     .18                         
+        CGSO  940.000000E-12  310.000000E-12 
+        CGDO  590.000000E-12  390.000000E-12 
+        CGBO  138.000000E-12  138.000000E-12 
+        NSUB   10.000000E+15   10.000000E+15 
+         NSS   70.000000E+09  100.000000E+09 
+         NFS  117.000000E+09  106.000000E+09 
+         TOX   55.000000E-09   55.000000E-09 
+          XJ    2.000000E-06    1.200000E-06 
+          UO  650             260            
+       UCRIT    7.000000E+03   10.000000E+03 
+        UEXP     .1              .16         
+        VMAX  160.000000E+03  300.000000E+03 
+        NEFF   10                            
+         XQC     .42             .42         
+          KF   75.000000E-30   75.000000E-30 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0000  (  OUT)    4.3875  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.148E-04
+    V_V2        -5.148E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.01  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0100  (  OUT)    4.3842  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.148E-04
+    V_V2        -5.148E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.02  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0200  (  OUT)    4.3809  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.148E-04
+    V_V2        -5.148E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.03  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0300  (  OUT)    4.3774  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.148E-04
+    V_V2        -5.148E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.04  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0400  (  OUT)    4.3740  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.05  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0500  (  OUT)    4.3705  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.06  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0600  (  OUT)    4.3669  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.07  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0700  (  OUT)    4.3633  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.08  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0800  (  OUT)    4.3596  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.09  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.0900  (  OUT)    4.3558  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.0900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.1   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1000  (  OUT)    4.3520  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.11  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1100  (  OUT)    4.3481  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.147E-04
+    V_V2        -5.147E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.12  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1200  (  OUT)    4.3442  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.13  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1300  (  OUT)    4.3401  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.14  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1400  (  OUT)    4.3360  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.15  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1500  (  OUT)    4.3319  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.16  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1600  (  OUT)    4.3276  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.17  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1700  (  OUT)    4.3233  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.18  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1800  (  OUT)    4.3189  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.146E-04
+    V_V2        -5.146E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.19  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.1900  (  OUT)    4.3144  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.1900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.2   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2000  (  OUT)    4.3098  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.21  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2100  (  OUT)    4.3051  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.22  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2200  (  OUT)    4.3003  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.15E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.23  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2300  (  OUT)    4.2954  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.24  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2400  (  OUT)    4.2904  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.145E-04
+    V_V2        -5.145E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.25  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2500  (  OUT)    4.2853  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.26  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2600  (  OUT)    4.2801  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.27  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2700  (  OUT)    4.2748  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.28  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2800  (  OUT)    4.2693  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.29  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.2900  (  OUT)    4.2637  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.2900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.3   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3000  (  OUT)    4.2580  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.144E-04
+    V_V2        -5.144E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.31  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3100  (  OUT)    4.2521  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.143E-04
+    V_V2        -5.143E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.32  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3200  (  OUT)    4.2461  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.143E-04
+    V_V2        -5.143E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.33  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3300  (  OUT)    4.2399  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.143E-04
+    V_V2        -5.143E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.34  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3400  (  OUT)    4.2336  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.143E-04
+    V_V2        -5.143E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.35  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3500  (  OUT)    4.2271  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.143E-04
+    V_V2        -5.143E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.36  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3600  (  OUT)    4.2204  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.142E-04
+    V_V2        -5.142E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.37  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3700  (  OUT)    4.2135  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.142E-04
+    V_V2        -5.142E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.38  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3800  (  OUT)    4.2064  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.142E-04
+    V_V2        -5.142E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.39  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.3900  (  OUT)    4.1990  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.3900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.142E-04
+    V_V2        -5.142E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.4   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4000  (  OUT)    4.1915  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.141E-04
+    V_V2        -5.141E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.41  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4100  (  OUT)    4.1837  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.141E-04
+    V_V2        -5.141E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.42  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4200  (  OUT)    4.1756  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.141E-04
+    V_V2        -5.141E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.43  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4300  (  OUT)    4.1673  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.141E-04
+    V_V2        -5.141E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.44  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4400  (  OUT)    4.1586  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.140E-04
+    V_V2        -5.140E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.45  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4500  (  OUT)    4.1496  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.140E-04
+    V_V2        -5.140E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.46  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4600  (  OUT)    4.1403  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.140E-04
+    V_V2        -5.140E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.47  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4700  (  OUT)    4.1305  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.139E-04
+    V_V2        -5.139E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.48  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4800  (  OUT)    4.1204  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.139E-04
+    V_V2        -5.139E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.49  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.4900  (  OUT)    4.1098  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.4900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.139E-04
+    V_V2        -5.139E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.5   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5000  (  OUT)    4.0987  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.138E-04
+    V_V2        -5.138E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.51  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5100  (  OUT)    4.0870  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.138E-04
+    V_V2        -5.138E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.52  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5200  (  OUT)    4.0747  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.138E-04
+    V_V2        -5.138E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.53  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5300  (  OUT)    4.0617  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.137E-04
+    V_V2        -5.137E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.54  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5400  (  OUT)    4.0479  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.137E-04
+    V_V2        -5.137E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.55  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5500  (  OUT)    4.0332  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.136E-04
+    V_V2        -5.136E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.56  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5600  (  OUT)    4.0175  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.136E-04
+    V_V2        -5.136E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.57  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5700  (  OUT)    4.0005  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.135E-04
+    V_V2        -5.135E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.14E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.58  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5800  (  OUT)    3.9820  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.134E-04
+    V_V2        -5.134E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.59  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.5900  (  OUT)    3.9617  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.5900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.134E-04
+    V_V2        -5.134E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.6   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6000  (  OUT)    3.9391  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.133E-04
+    V_V2        -5.133E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.61  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6100  (  OUT)    3.9134  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.132E-04
+    V_V2        -5.132E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.62  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6200  (  OUT)    3.8835  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.131E-04
+    V_V2        -5.131E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.63  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6300  (  OUT)    3.8470  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.130E-04
+    V_V2        -5.130E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.64  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6400  (  OUT)    3.7979  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.128E-04
+    V_V2        -5.128E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.65  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6500  (  OUT)    3.7029  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.125E-04
+    V_V2        -5.125E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.13E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.66  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6600  (  OUT)    3.3151  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.112E-04
+    V_V2        -5.112E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.11E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.67  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6700  (  OUT)    2.9122  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.098E-04
+    V_V2        -5.098E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.10E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.68  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6800  (  OUT)    2.5041  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.083E-04
+    V_V2        -5.083E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.08E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.69  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.6900  (  OUT)    2.0926  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.6900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.068E-04
+    V_V2        -5.068E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.07E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.7   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7000  (  OUT)    1.6791  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.052E-04
+    V_V2        -5.052E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.05E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.71  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7100  (  OUT)    1.2652  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.036E-04
+    V_V2        -5.036E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.04E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.72  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7200  (  OUT)     .8523  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.020E-04
+    V_V2        -5.020E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   5.02E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.73  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7300  (  OUT)     .4417  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.003E-04
+    V_V2        -5.003E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.00E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.74  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7400  (  OUT)     .0347  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.986E-04
+    V_V2        -4.986E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.99E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.75  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7500  (  OUT)    -.3675  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.968E-04
+    V_V2        -4.968E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.97E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.76  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7600  (  OUT)    -.7634  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.949E-04
+    V_V2        -4.949E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.95E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.77  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7700  (  OUT)   -1.1518  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.930E-04
+    V_V2        -4.930E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.93E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.78  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7800  (  OUT)   -1.5313  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.911E-04
+    V_V2        -4.911E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.91E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.79  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.7900  (  OUT)   -1.9004  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.7900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.891E-04
+    V_V2        -4.891E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.89E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.8   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8000  (  OUT)   -2.2575  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.871E-04
+    V_V2        -4.871E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.87E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.81  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8100  (  OUT)   -2.6010  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.851E-04
+    V_V2        -4.851E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.85E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.82  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8200  (  OUT)   -2.9290  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.829E-04
+    V_V2        -4.829E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.83E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.83  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8300  (  OUT)   -3.2393  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.808E-04
+    V_V2        -4.808E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.81E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.84  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8400  (  OUT)   -3.5288  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.785E-04
+    V_V2        -4.785E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.79E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.85  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8500  (  OUT)   -3.7934  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.762E-04
+    V_V2        -4.762E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.76E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.86  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8600  (  OUT)   -4.0249  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.738E-04
+    V_V2        -4.738E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.74E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.87  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8700  (  OUT)   -4.1998  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.713E-04
+    V_V2        -4.713E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.71E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.88  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8800  (  OUT)   -4.2656  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.686E-04
+    V_V2        -4.686E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.69E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.89  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.8900  (  OUT)   -4.3029  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.8900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.657E-04
+    V_V2        -4.657E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.66E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.9   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9000  (  OUT)   -4.3319  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.629E-04
+    V_V2        -4.629E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.63E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.91  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9100  (  OUT)   -4.3565  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9100                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.601E-04
+    V_V2        -4.601E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.60E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.92  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9200  (  OUT)   -4.3780  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9200                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.573E-04
+    V_V2        -4.573E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.57E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.93  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9300  (  OUT)   -4.3975  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9300                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.545E-04
+    V_V2        -4.545E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.55E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.94  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9400  (  OUT)   -4.4154  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9400                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.517E-04
+    V_V2        -4.517E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.52E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.95  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9500  (  OUT)   -4.4319  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.490E-04
+    V_V2        -4.490E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.49E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.96  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9600  (  OUT)   -4.4474  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9600                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.462E-04
+    V_V2        -4.462E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.46E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.97  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9700  (  OUT)   -4.4620  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9700                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.435E-04
+    V_V2        -4.435E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.43E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.98  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9800  (  OUT)   -4.4759  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9800                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.408E-04
+    V_V2        -4.408E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.41E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    2.99  
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    2.9900  (  OUT)   -4.4890  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    2.9900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.380E-04
+    V_V2        -4.380E-04
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.38E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     V_V4 =    3     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    3.0000  (  OUT)   -4.5015  (  VDD)    5.0000  (  VSS)   -5.0000      
+
+(N23093)   -3.0941 (N276751)    3.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.353E-04
+    V_V2        -4.353E-04
+    V_V3         2.168E-19
+    V_V4         2.168E-19
+
+    TOTAL POWER DISSIPATION   4.35E-03  WATTS
+
+
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+
+          JOB CONCLUDED
+
+**** 04/21/23 17:55:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-dc"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\Ampli SC CMOS\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     V_V4 =    3     
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

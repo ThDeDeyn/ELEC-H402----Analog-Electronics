@@ -1,0 +1,47 @@
+
+**** 11/22/11 07:52:16 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Xfert"  [ D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\Labo4 MOS2\Ampli Drain Commun\ampl
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Xfert.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_VGQ 0 5 .01 
+.STEP PARAM RSval LIST 0.001,10 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDRAINCOMMUN
+X_X1         VDD N15983 N14721 BSS87_L0 
+V_V1         VDD 0 5V
+V_VGQ         N15987 0 4.5V
+R_RS         0 N14721  {RSval} TC=0,0 
+V_V2         N15983 N15987  AC 1V
++SIN 0 {DeltaVin} 1kHz 0 0 0
+C_CL         N14721 VOUT  180u  TC=0,0 
+R_RL         0 VOUT  {RLval} TC=0,0 
+.PARAM  dvin=1 rsval=10 deltavin=0 rlval=20
+
+**** RESUMING Xfert.cir ****
+.END
+
+ERROR -- Subcircuit BSS87_L0 used by X_X1 is undefined

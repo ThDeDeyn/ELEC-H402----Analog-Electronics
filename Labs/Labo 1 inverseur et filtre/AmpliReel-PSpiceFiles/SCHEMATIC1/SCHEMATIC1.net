@@ -1,0 +1,9 @@
+* source AMPLIREEL
+X_U1         0 N14601 N14535 +12 -12 Ampli_reel  params: Ao=30E3 eo=5mV ip=65pA
++  im=35pA Rid=1.5T Ro=100 
+V_V1         +12 0 +12V
+V_V2         -12 0 -12V
+R_R1         N14601 N14535  5k TC=0,0 
+R_R2         N14622 N14601  1k TC=0,0 
+V_V3         N14622 0  AC 1
++SIN 0 .1 50 0 0 0

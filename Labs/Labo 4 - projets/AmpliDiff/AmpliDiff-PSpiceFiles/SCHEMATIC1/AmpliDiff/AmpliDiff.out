@@ -1,0 +1,199 @@
+
+**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AmpliDiff.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SMALL_S"
++ "IGNAL.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SEDRA_L"
++ "IB.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ELEC-H4"
++ "02.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
++ "" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDIFF
+V_Val+         VDD 0 5
+V_V2         0 VSS 5
+I_I2         N19717 VSS DC 500u  
+V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
+V_Vcm         IN- 0 DC 0Vdc AC 0Vac 
+M_M4         OUT N19154 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M1         N19154 IN+ N19717 N19717 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         OUT IN- N19717 N19717 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M3         N19154 N19154 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+
+**** RESUMING AmpliDiff.cir ****
+.END
+
+**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pcg             ncg             
+               PMOS            NMOS            
+       LEVEL    2               2            
+         TPG   -1                            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  960.000000E-09    1.600000E-06 
+          WD  500.000000E-09    1.050000E-06 
+         VTO    -.74             .75         
+          KP   16.323950E-06   40.809880E-06 
+       GAMMA     .58            1.09         
+         PHI     .7              .7          
+      LAMBDA    0               0            
+         RSH   90              10            
+          IS   10.000000E-15   10.000000E-15 
+          JS   20.000000E-06   20.000000E-06 
+          PB     .9              .9          
+        PBSW     .9              .9          
+          CJ  180.000000E-06  390.000000E-06 
+        CJSW  322.000000E-12  264.000000E-12 
+          MJ     .57                         
+        MJSW                     .18         
+        CGSO  310.000000E-12  940.000000E-12 
+        CGDO  390.000000E-12  590.000000E-12 
+        CGBO  138.000000E-12  138.000000E-12 
+        NSUB   10.000000E+15   10.000000E+15 
+         NSS  100.000000E+09   70.000000E+09 
+         NFS  106.000000E+09  117.000000E+09 
+         TOX   55.000000E-09   55.000000E-09 
+          XJ    1.200000E-06    2.000000E-06 
+          UO  260             650            
+       UCRIT   10.000000E+03    7.000000E+03 
+        UEXP     .16             .1          
+        VMAX  300.000000E+03  160.000000E+03 
+        NEFF                   10            
+         XQC     .42             .42         
+          KF   75.000000E-30   75.000000E-30 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN+)    0.0000  (  IN-)    0.0000  (  OUT)    2.7355  (  VDD)    5.0000      
+
+(  VSS)   -5.0000  (N19154)    2.7355 (N19717)   -1.8909 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Val+      -5.000E-04
+    V_V2        -5.000E-04
+    V_Vd         0.000E+00
+    V_Vcm        0.000E+00
+
+    TOTAL POWER DISSIPATION   5.00E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

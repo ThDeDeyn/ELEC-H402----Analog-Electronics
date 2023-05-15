@@ -1,0 +1,81 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VDC")
+        ("NMOS5P0")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"10Vdc")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("M1"
+            ("device_name"	"NMOS5P0")
+            ("pspice_path"	"M_M1")
+            ("level"	"0")
+            ("model_params"
+                ("L"
+                    ("value"	"5u")
+                    ("pspice_param"	"L")
+                )
+                ("W"
+                    ("value"	"12.5u")
+                    ("pspice_param"	"W")
+                )
+                ("PD"
+                    ("value"	"5.25E-6")
+                    ("pspice_param"	"PD")
+                )
+                ("NRS"
+                    ("value"	"")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRD"
+                    ("value"	"")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRB"
+                    ("value"	"")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"1")
+                    ("pspice_param"	"M")
+                )
+                ("AD"
+                    ("value"	"1.72E-12")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"1.72E-12")
+                    ("pspice_param"	"AS")
+                )
+                ("PS"
+                    ("value"	"5.25E-6")
+                    ("pspice_param"	"PS")
+                )
+            )
+        )
+        ("V2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

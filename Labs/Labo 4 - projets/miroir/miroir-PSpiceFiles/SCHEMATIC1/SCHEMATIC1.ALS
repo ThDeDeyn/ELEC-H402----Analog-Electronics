@@ -1,0 +1,10 @@
+.ALIASES
+V_VDD           VDD(+=VDD -=0 ) CN @MIROIR.SCHEMATIC1(sch_1):INS40@SOURCE.VDC.Normal(chips)
+V_VSS           VSS(+=0 -=VSS ) CN @MIROIR.SCHEMATIC1(sch_1):INS82@SOURCE.VDC.Normal(chips)
+R_R1            R1(1=N00263 2=VDD ) CN @MIROIR.SCHEMATIC1(sch_1):INS826@ANALOG.R.Normal(chips)
+V_VD2           VD2(+=N00555 -=0 ) CN @MIROIR.SCHEMATIC1(sch_1):INS895@SOURCE.VDC.Normal(chips)
+M_M1            M1(d=N00555 g=N00263 s=VSS b=VSS ) CN @MIROIR.SCHEMATIC1(sch_1):INS28038@ALD.NMOS.Normal(chips)
+M_M2            M2(d=N00263 g=N00263 s=VSS b=VSS ) CN @MIROIR.SCHEMATIC1(sch_1):INS28110@ALD.NMOS.Normal(chips)
+_    _(VDD=VDD)
+_    _(VSS=VSS)
+.ENDALIASES

@@ -1,0 +1,11 @@
+* source CARACTERISTIQUE_DU_NMOS
+V_V1         VDD 0 10Vdc
+M_M1         VDD N14422 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+V_V2         N14422 0 0Vdc

@@ -1,0 +1,46 @@
+* source AMPLIDIFF
+V_Val+         VDD 0 5
+V_V2         0 VSS 5
+I_I2         N19717 VSS DC 500u  
+V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
+V_Vcm         IN- 0 DC 0Vdc AC 0Vac 
+M_M4         OUT N19154 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M1         N19154 IN+ N19717 N19717 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         OUT IN- N19717 N19717 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M3         N19154 N19154 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 

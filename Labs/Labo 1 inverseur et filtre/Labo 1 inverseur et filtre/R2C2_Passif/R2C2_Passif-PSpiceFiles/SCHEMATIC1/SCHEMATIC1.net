@@ -1,0 +1,7 @@
+* source R2C2_PASSIF
+R_R1         0 OUT  {Rval}  
+C_C1         N14549 OUT  {Cval}  
+V_V1         IN 0 DC 0Vdc AC 1Vac 
+R_R2         IN N14549  {Rval}  
+C_C2         0 OUT  {Cval}  
+.PARAM  amort=1 rval={1/(cval*wc)} cval=1nf wc={2*3.14159*fc} fc=100khz

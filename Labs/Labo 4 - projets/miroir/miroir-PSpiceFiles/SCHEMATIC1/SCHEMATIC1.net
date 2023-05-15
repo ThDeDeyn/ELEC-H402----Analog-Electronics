@@ -1,0 +1,26 @@
+* source MIROIR
+V_VDD         VDD 0 5
+V_VSS         0 VSS 5
+R_R1         N00263 VDD  {RD1} TC=0,0 
+V_VD2         N00555 0 5
+M_M1         N00555 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         N00263 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+.PARAM  rd1=15k

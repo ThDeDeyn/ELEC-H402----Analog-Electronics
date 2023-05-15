@@ -1,0 +1,103 @@
+* source AMPLI OP 2 ETAGES BF
+V_VDD         VDD 0 5
+V_VSS         0 VSS 5
+M_M1         N00263 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         N00555 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+R_R1         N00263 VDD  15k TC=0,0 
+M_M3         N01628 IN- N00555 N00555 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M4         OUT1 IN+1 N00555 N00555 ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M5         N01628 N01628 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M6         OUT1 N01628 VDD VDD pcg  
++ L=7.8E-6  
++ W=0.138E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M7         OUT2 N28334 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M8         OUT2 OUT1 VDD VDD pcg  
++ L=7.8E-6  
++ W={0.138E-3}  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-6  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+R_R2         N28334 VDD  33.6k TC=0,0 
+M_M9         N28334 N28334 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+R_RL         IN- OUT2  {RLval} TC=0,0 
+R_RL1         0 IN-  {RLval/(GainBF-1)} TC=0,0 
+V_V5         N41314 0 0Vdc
+V_V6         IN+2 0  
++PULSE 0m 10mVdc 0m 100n 100n 1m 10m
+C_C1         OUT1 VDD  {C1val}  TC=0,0 
+V_V7         IN+1 N41314 DC 0Vdc AC 1Vac 
+.PARAM  rlval=1meg gainbf=10 c1val=1n

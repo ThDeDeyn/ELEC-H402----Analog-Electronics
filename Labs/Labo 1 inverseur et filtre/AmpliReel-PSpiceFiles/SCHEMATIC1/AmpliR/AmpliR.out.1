@@ -1,0 +1,53 @@
+
+**** 03/10/23 10:25:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AmpliR"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 1 inverseur et filtre\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AmpliR.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/libraries for elec-h402/libraries for elec-h402/elec-h4"
++ "02.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 20us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIREEL
+X_U1         N14601 N14626 N14535 -12 +12 Ampli_reel  params: Ao=30E3 eo=5mV
++  ip=65pA im=35pA Rid=1.5T Ro=100 
+V_V1         +12 N14329 +12V
+V_V2         -12 N14329 -12V
+R_R1         N14601 N14535  5k TC=0,0 
+R_R2         N14622 N14601  1k TC=0,0 
+V_V3         N14622 N14626  AC 1
++SIN 1 0 50 0 0 0
+
+**** RESUMING AmpliR.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node +12 is floating
+
+ERROR(ORPSIM-15142): Node N14329 is floating
+
+ERROR(ORPSIM-15142): Node -12 is floating
+

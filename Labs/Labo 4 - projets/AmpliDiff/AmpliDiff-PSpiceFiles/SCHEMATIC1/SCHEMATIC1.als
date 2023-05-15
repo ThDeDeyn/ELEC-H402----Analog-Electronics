@@ -1,0 +1,16 @@
+.ALIASES
+V_Val+          Val+(+=VDD -=0 ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS213@SOURCE.VDC.Normal(chips)
+V_V2            V2(+=0 -=VSS ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS229@SOURCE.VDC.Normal(chips)
+I_I2            I2(+=N19717 -=VSS ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS19607@SOURCE.IDC.Normal(chips)
+V_Vd            Vd(+=IN+ -=IN- ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS20010@SOURCE.VAC.Normal(chips)
+V_Vcm           Vcm(+=IN- -=0 ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS20832@SOURCE.VAC.Normal(chips)
+M_M4            M4(d=OUT g=N19154 s=VDD b=VDD ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS25196@ALD.PMOS.Normal(chips)
+M_M1            M1(d=N19154 g=IN+ s=N19717 b=N19717 ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS25241@ALD.NMOS.Normal(chips)
+M_M2            M2(d=OUT g=IN- s=N19717 b=N19717 ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS25376@ALD.NMOS.Normal(chips)
+M_M3            M3(d=N19154 g=N19154 s=VDD b=VDD ) CN @AMPLIDIFF.SCHEMATIC1(sch_1):INS25636@ALD.PMOS.Normal(chips)
+_    _(in+=IN+)
+_    _(in-=IN-)
+_    _(out=OUT)
+_    _(VDD=VDD)
+_    _(VSS=VSS)
+.ENDALIASES

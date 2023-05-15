@@ -1,0 +1,267 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VDC")
+        ("R"
+            ("info"
+                ("spice_dsg"	"R")
+                ("port_order"
+                    ("1")
+                    ("2")
+                )
+            )
+            ("model_params"
+                ("level_0"
+                    ("TC1"
+                        ("value"	"0")
+                    )
+                    ("TC2"
+                        ("value"	"0")
+                    )
+                    ("VALUE"
+                        ("value"	"0")
+                    )
+                )
+            )
+            ("smoke"
+                ("pre_smoke"
+                    ("NODE_VA"	"1")
+                    ("NODE_VB"	"2")
+                    ("DERATE_TYPE"	"RES")
+                )
+                ("max_ops"
+                    ("RV"	"VOLTAGE")
+                    ("PDM"	"POWER")
+                    ("SLP"	"SLOPE")
+                    ("RBA"	"1/SLP")
+                    ("TMAX"	"MAX_TEMP")
+                    ("TB"	"TMAX")
+                    ("RTKNEE"	"TKNEE")
+                    ("RTRISE"	"TRISE")
+                )
+                ("smoke_tests"
+                    ("PDM"
+                        ("test"	"power_test")
+                    )
+                    ("RV"
+                        ("test"	"abs_voltage_test")
+                        ("nodes"
+                            ("NODE_VA")
+                            ("NODE_VB")
+                        )
+                    )
+                    ("TB"
+                        ("test"	"temp_null_test")
+                    )
+                )
+                ("device_max_ops")
+            )
+        )
+        ("NMOS")
+        ("Param")
+    )
+    ("instances"
+        ("VDD"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VDD")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VSS"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VSS")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"{RD1}")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
+                )
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("VD2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VD2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("M1"
+            ("device_name"	"NMOS")
+            ("pspice_path"	"M_M1")
+            ("level"	"0")
+            ("model_params"
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
+                )
+                ("W"
+                    ("value"	"0.069E-3")
+                    ("pspice_param"	"W")
+                )
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
+                )
+            )
+        )
+        ("M2"
+            ("device_name"	"NMOS")
+            ("pspice_path"	"M_M2")
+            ("level"	"0")
+            ("model_params"
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
+                )
+                ("W"
+                    ("value"	"0.069E-3")
+                    ("pspice_param"	"W")
+                )
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
+                )
+            )
+        )
+        ("PARAM"
+            ("device_name"	"Param")
+            ("pspice_path"	"")
+            ("level"	"0")
+            ("model_params"
+                ("rd1"
+                    ("value"	"15k")
+                    ("pspice_param"	"rd1")
+                )
+            )
+        )
+    )
+)

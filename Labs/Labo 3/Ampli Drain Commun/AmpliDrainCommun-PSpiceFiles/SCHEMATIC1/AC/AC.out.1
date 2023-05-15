@@ -1,0 +1,51 @@
+
+**** 11/21/11 08:13:20 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AC"  [ D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\Labo4 MOS2\Ampli Drain Commun\AmpliDr
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/pm/Documents PM/Cours/_Analogique/ELEC-H-402 2011-2012/Labos/Labo H402 PSpice Lib/small_signal.lib" 
+* From [PSPICE NETLIST] section of E:\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 5 1Hz 1GHz
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDRAINCOMMUN
+X_X1         VDD N14643 N14721 BSS87_L0 
+V_V1         VDD 0 10Vdc
+V_VGQ         N14643 0 5.5V
+R_RS         0 N14721  {RSval} TC=0,0 
+X_X2         VDD VIN VOUT BSS87_L0 
+R_RS1         0 VOUT  10 TC=0,0 
+V_V2         VIN 0  AC 1V
++SIN 5.5V 1V 1kHz 0 0 0
+.PARAM  rsval=10
+
+**** RESUMING AC.cir ****
+.END
+
+ERROR -- Circuit Too Large!
+EVALUATION VERSION Limit Exceeded for "X" Devices!
+
+
+

@@ -1,0 +1,45 @@
+
+**** 03/10/23 09:16:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-InverseurParf"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 1 inverseur et 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "InverseurParf.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.2s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INVERSEURPARFAIT
+R_R1         N14417 N14379  1k TC=0,0 
+R_R2         N14379 N14360  5k TC=0,0 
+V_V1         N14417 N14517 DC 0Vdc AC 0.1Vac 
+X_U1         N14379 N14517 N14360 -10 +10 Ampli_parfait  params: Ao=30E3 
+V_V2         +10 0 10Vdc
+V_V3         -10 0 -10Vdc
+
+**** RESUMING InverseurParf.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit Ampli_parfait used by X_U1 is undefined
+

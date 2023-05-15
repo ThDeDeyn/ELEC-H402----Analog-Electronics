@@ -1,0 +1,71 @@
+
+**** 03/17/23 11:44:44 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 2\ampli source commune-p
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/libraries for elec-h402/libraries for elec-h402/sedra_l"
++ "ib.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.FOUR 10k 5 V([OUT]) 
+.STEP DEC PARAM VAMPL 10mV 3.16V 2 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SOURCE COMMUNE
+V_VDD         VDD 0 10V
+R_RD         OUT VDD 33k
+R_R1         N14456 VDD 7.69meg
+R_R2         0 N14456 2.31meg
+V_V1         IN 0  AC 1V
++SIN 0 {Vin} 10kHz 0 0 0
+C_C1         N14456 IN 900p TC=0
+C_C2         OUT N18848  900u  TC=0,0 
+R_RL         0 N18848  {RLval} TC=0,0 
+V_VGS         N20556 0 2.3V
+M_M2         VDD N20556 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+M_M1         OUT N14456 0 0 NMOS5P0  
++ L=5u  
++ W=12.5u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+.PARAM  vin=1v rlval=1000meg
+
+**** RESUMING BIAS.cir ****
+.END
+
+
+ERROR(ORPSIM-15167): Undefined parameter: VAMPL.
+

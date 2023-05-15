@@ -1,0 +1,407 @@
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.5us 
+.FOUR 10k 5 V([OUT]) 
+.STEP LIN PARAM DeltaVin 1 2.5 0.5 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDRAINCOMMUN
+V_V1         VDD 0 +5V
+V_VGQ         N15987 0 4.14V
+R_RS         0 OUT  {RSval} TC=0,0 
+V_Vi         IN N15987  AC 1V
++SIN 0 {DeltaVin} 1kHz 0 0 0
+C_CL         OUT SORTIE  180u  TC=0,0 
+R_RL         0 SORTIE  {RLval} TC=0,0 
+X_M1         VDD IN OUT BSS87_L1 PARAMS:    
+.PARAM  rlval=100000000 deltavin=2.5v rsval=10 dvin=1
+
+**** RESUMING Time.cir ****
+.END
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    1     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    4.1400  (  OUT)    1.4997  (  VDD)    5.0000  (N15987)    4.1400     
+
+(SORTIE)    0.0000 (X_M1.g)    4.1400 (X_M1.s)    1.5121 (X_M1.w)-27.00E-18     
+
+(X_M1.d1)    5.0000                   (X_M1.g1)    4.1400                       
+
+(X_M1.s1)    1.4997                   (X_M1.Tj)   27.0000                       
+
+(X_M1.X1.a) 105.7E-12                 (X_M1.X1.b) 6.992E-09                     
+
+(X_M1.X1.c) 105.7E-12                 (X_M1.X1.d)    4.4479                     
+
+(X_M1.X1.e) 105.7E-06                 (X_M1.X1.f) 105.7E-12                     
+
+(X_M1.X1.d1)    5.0000                (X_M1.X1.d2)    5.0000                    
+
+(X_M1.X1.d3)    5.0000                (X_M1.X1.ox)    4.4479                    
+
+(X_M1.X1.ox1)    4.4479               (X_M1.X1.edep)    3.7956              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-01
+    V_VGQ       -2.628E-09
+    V_Vi        -2.628E-09
+    X_M1.X1.V_sense   1.500E-01
+    X_M1.X1.V_sense2   6.992E-09
+    X_M1.X1.V_sense3   1.057E-10
+
+    TOTAL POWER DISSIPATION   7.50E-01  WATTS
+
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    1     
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   1.2825E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   1.3337E-01   1.0000E+00   1.7861E+02   0.0000E+00
+     2    2.0000E+04   6.6169E-02   4.9612E-01  -1.7934E+02  -5.3655E+02
+     3    3.0000E+04   4.4057E-02   3.3034E-01  -1.7806E+02  -7.1388E+02
+     4    4.0000E+04   3.3036E-02   2.4770E-01  -1.7697E+02  -8.9139E+02
+     5    5.0000E+04   2.6432E-02   1.9818E-01  -1.7596E+02  -1.0690E+03
+
+
+     TOTAL HARMONIC DISTORTION =   6.7520E+01 PERCENT
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    1.5   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    4.1400  (  OUT)    1.4997  (  VDD)    5.0000  (N15987)    4.1400     
+
+(SORTIE)    0.0000 (X_M1.g)    4.1400 (X_M1.s)    1.5121 (X_M1.w)-27.00E-18     
+
+(X_M1.d1)    5.0000                   (X_M1.g1)    4.1400                       
+
+(X_M1.s1)    1.4997                   (X_M1.Tj)   27.0000                       
+
+(X_M1.X1.a) 105.7E-12                 (X_M1.X1.b) 6.992E-09                     
+
+(X_M1.X1.c) 105.7E-12                 (X_M1.X1.d)    4.4479                     
+
+(X_M1.X1.e) 105.7E-06                 (X_M1.X1.f) 105.7E-12                     
+
+(X_M1.X1.d1)    5.0000                (X_M1.X1.d2)    5.0000                    
+
+(X_M1.X1.d3)    5.0000                (X_M1.X1.ox)    4.4479                    
+
+(X_M1.X1.ox1)    4.4479               (X_M1.X1.edep)    3.7956              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-01
+    V_VGQ       -2.628E-09
+    V_Vi        -2.628E-09
+    X_M1.X1.V_sense   1.500E-01
+    X_M1.X1.V_sense2   6.992E-09
+    X_M1.X1.V_sense3   1.057E-10
+
+    TOTAL POWER DISSIPATION   7.50E-01  WATTS
+
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    1.5   
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   1.1767E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   1.9748E-01   1.0000E+00   1.7832E+02   0.0000E+00
+     2    2.0000E+04   9.7944E-02   4.9597E-01  -1.7948E+02  -5.3612E+02
+     3    3.0000E+04   6.5211E-02   3.3022E-01  -1.7815E+02  -7.1311E+02
+     4    4.0000E+04   4.8897E-02   2.4761E-01  -1.7704E+02  -8.9032E+02
+     5    5.0000E+04   3.9122E-02   1.9811E-01  -1.7601E+02  -1.0676E+03
+
+
+     TOTAL HARMONIC DISTORTION =   6.7497E+01 PERCENT
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    2     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    4.1400  (  OUT)    1.4997  (  VDD)    5.0000  (N15987)    4.1400     
+
+(SORTIE)    0.0000 (X_M1.g)    4.1400 (X_M1.s)    1.5121 (X_M1.w)-27.00E-18     
+
+(X_M1.d1)    5.0000                   (X_M1.g1)    4.1400                       
+
+(X_M1.s1)    1.4997                   (X_M1.Tj)   27.0000                       
+
+(X_M1.X1.a) 105.7E-12                 (X_M1.X1.b) 6.992E-09                     
+
+(X_M1.X1.c) 105.7E-12                 (X_M1.X1.d)    4.4479                     
+
+(X_M1.X1.e) 105.7E-06                 (X_M1.X1.f) 105.7E-12                     
+
+(X_M1.X1.d1)    5.0000                (X_M1.X1.d2)    5.0000                    
+
+(X_M1.X1.d3)    5.0000                (X_M1.X1.ox)    4.4479                    
+
+(X_M1.X1.ox1)    4.4479               (X_M1.X1.edep)    3.7956              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-01
+    V_VGQ       -2.628E-09
+    V_Vi        -2.628E-09
+    X_M1.X1.V_sense   1.500E-01
+    X_M1.X1.V_sense2   6.992E-09
+    X_M1.X1.V_sense3   1.057E-10
+
+    TOTAL POWER DISSIPATION   7.50E-01  WATTS
+
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    2     
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   1.0730E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   2.5946E-01   1.0000E+00   1.7796E+02   0.0000E+00
+     2    2.0000E+04   1.2859E-01   4.9562E-01  -1.7966E+02  -5.3559E+02
+     3    3.0000E+04   8.5606E-02   3.2994E-01  -1.7827E+02  -7.1216E+02
+     4    4.0000E+04   6.4187E-02   2.4739E-01  -1.7713E+02  -8.8898E+02
+     5    5.0000E+04   5.1355E-02   1.9793E-01  -1.7608E+02  -1.0659E+03
+
+
+     TOTAL HARMONIC DISTORTION =   6.7445E+01 PERCENT
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    2.5   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    4.1400  (  OUT)    1.4997  (  VDD)    5.0000  (N15987)    4.1400     
+
+(SORTIE)    0.0000 (X_M1.g)    4.1400 (X_M1.s)    1.5121 (X_M1.w)-27.00E-18     
+
+(X_M1.d1)    5.0000                   (X_M1.g1)    4.1400                       
+
+(X_M1.s1)    1.4997                   (X_M1.Tj)   27.0000                       
+
+(X_M1.X1.a) 105.7E-12                 (X_M1.X1.b) 6.992E-09                     
+
+(X_M1.X1.c) 105.7E-12                 (X_M1.X1.d)    4.4479                     
+
+(X_M1.X1.e) 105.7E-06                 (X_M1.X1.f) 105.7E-12                     
+
+(X_M1.X1.d1)    5.0000                (X_M1.X1.d2)    5.0000                    
+
+(X_M1.X1.d3)    5.0000                (X_M1.X1.ox)    4.4479                    
+
+(X_M1.X1.ox1)    4.4479               (X_M1.X1.edep)    3.7956              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-01
+    V_VGQ       -2.628E-09
+    V_Vi        -2.628E-09
+    X_M1.X1.V_sense   1.500E-01
+    X_M1.X1.V_sense2   6.992E-09
+    X_M1.X1.V_sense3   1.057E-10
+
+    TOTAL POWER DISSIPATION   7.50E-01  WATTS
+
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    2.5   
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   9.7190E-01
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+04   3.1888E-01   1.0000E+00   1.7751E+02   0.0000E+00
+     2    2.0000E+04   1.5782E-01   4.9493E-01  -1.7989E+02  -5.3490E+02
+     3    3.0000E+04   1.0504E-01   3.2940E-01  -1.7843E+02  -7.1094E+02
+     4    4.0000E+04   7.8751E-02   2.4696E-01  -1.7725E+02  -8.8727E+02
+     5    5.0000E+04   6.3005E-02   1.9758E-01  -1.7618E+02  -1.0637E+03
+
+
+     TOTAL HARMONIC DISTORTION =   6.7341E+01 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 03/24/23 11:06:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 3\Ampli Drain Commun\amp
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM DELTAVIN =    2.5   
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        6.05
+

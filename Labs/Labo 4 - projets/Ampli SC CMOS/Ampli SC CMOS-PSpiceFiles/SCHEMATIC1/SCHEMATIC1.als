@@ -1,0 +1,14 @@
+.ALIASES
+V_V1            V1(+=VDD -=0 ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS14530@SOURCE.VDC.Normal(chips)
+V_V2            V2(+=0 -=VSS ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS14546@SOURCE.VDC.Normal(chips)
+R_RD1           RD1(1=N23093 2=VDD ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS23149@ANALOG.R.Normal(chips)
+M_M1            M1(d=N23093 g=N23093 s=VSS b=VSS ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS25839@ALD.NMOS.Normal(chips)
+M_M2            M2(d=OUT g=N23093 s=VSS b=VSS ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS25867@ALD.NMOS.Normal(chips)
+M_M3            M3(d=OUT g=IN s=VDD b=VDD ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS25912@ALD.PMOS.Normal(chips)
+V_V3            V3(+=IN -=N276751 ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS27663@SOURCE.VAC.Normal(chips)
+V_V4            V4(+=N276751 -=0 ) CN @AMPLI SC CMOS.SCHEMATIC1(sch_1):INS27695@SOURCE.VDC.Normal(chips)
+_    _(in=IN)
+_    _(out=OUT)
+_    _(Vdd=VDD)
+_    _(Vss=VSS)
+.ENDALIASES

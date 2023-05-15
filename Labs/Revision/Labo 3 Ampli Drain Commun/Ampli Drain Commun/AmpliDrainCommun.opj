@@ -1,0 +1,186 @@
+(ExpressProject "AmpliDrainCommun"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File
+         "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File
+         "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "E:\OrCAD\OrCAD_16.3_Demo\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "amplidraincommun.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (Board_sim_option "VHDL_flow"))
+  (Folder "Outputs"
+    (File ".\amplidraincommun-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SEDRA_LIB.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SEDRA_LIB.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ALD.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ALD.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ELEC-H402.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\ELEC-H402.lib"))
+      (File
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SMALL_SIGNAL.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Libraries for ELEC-H402\Libraries for ELEC-H402\SMALL_SIGNAL.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidraincommun-pspicefiles\schematic1\bias.sim"
+        (DisplayName "SCHEMATIC1-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidraincommun-pspicefiles\schematic1\xfert.sim"
+        (DisplayName "SCHEMATIC1-Xfert")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidraincommun-pspicefiles\schematic1\ac.sim"
+        (DisplayName "SCHEMATIC1-AC")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\amplidraincommun-pspicefiles\schematic1\time.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\amplidraincommun-pspicefiles\schematic1\time.sim"
+        (DisplayName "SCHEMATIC1-Time")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (Ampli_parfait
+      (FullPartName "Ampli_parfait.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\LABO H402 PSPICE LIB\ELEC-H402.OLB")
+      (DeviceIndex "0"))
+    (BSS87_L1
+      (FullPartName "BSS87_L1.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\PSPICE\LIBRAIRIE SPICE ANALOG\SMALL_SIGNAL.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (BSS87
+      (FullPartName "BSS87.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\PSPICE\LIBRAIRIE SPICE ANALOG\SMALL_SIGNAL.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "E:\ORCAD\ORCAD_16.3_DEMO\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (BSS87_L0
+      (FullPartName "BSS87_L0.Normal")
+      (LibraryName
+         "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\PSPICE\LIBRAIRIE SPICE ANALOG\SMALL_SIGNAL.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\Labos\Pspice\librairie spice analog")
+  (MPSSessionName "thoma")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Revision\Labo 3 Ampli Drain Commun\Ampli Drain Commun\amplidraincommun.dsn")
+      (Path "Design Resources"
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Revision\Labo 3 Ampli Drain Commun\Ampli Drain Commun\amplidraincommun.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Revision\Labo 3 Ampli Drain Commun\Ampli Drain Commun\amplidraincommun.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 457 0 510"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1382 52 365")
+        (Scroll "503 756")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "D:\POLYTECH\MA1 2022-2023 ULB\Q2\ELEC-H402 -- ANALOG ELECTRONICS\LABS\REVISION\LABO 3 AMPLI DRAIN COMMUN\AMPLI DRAIN COMMUN\AMPLIDRAINCOMMUN.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

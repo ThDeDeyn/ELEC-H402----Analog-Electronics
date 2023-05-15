@@ -1,0 +1,10 @@
+* source AMPLIDRAINCOMMUN
+V_V1         VDD 0 +5V
+V_VGQ         N15987 0 4.14V
+R_RS         0 OUT  {RSval} TC=0,0 
+V_Vi         IN N15987  AC 1V
++SIN 0 {DeltaVin} 1kHz 0 0 0
+C_CL         OUT N16140  180u  TC=0,0 
+R_RL         0 N16140  {RLval} TC=0,0 
+X_M1         VDD IN OUT BSS87_L1 PARAMS:    
+.PARAM  rlval=20 deltavin=2.5v rsval=10 dvin=1
