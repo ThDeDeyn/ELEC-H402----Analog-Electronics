@@ -1,6 +1,6 @@
 @OrCAD Simulation Server Version: 1.0
 
-@Settings: 3 1
+@Settings: 1 1
 @General:
 ProfileName= "AmpliDiff" 
 ProfileFile= "AmpliDiff.sim" 
@@ -31,7 +31,7 @@ Notes=
 +4 "" 
 +5 "" 
 @End Analysis
-@Analysis: 2 0
+@Analysis: 2 1
 +0 0
 +0 "Vd" 
 +1 "" 
@@ -42,14 +42,14 @@ Notes=
 +6 "0.01" 
 +7 "" 
 @End Analysis
-@Analysis: 3 1
+@Analysis: 3 0
 +0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
 @End Analysis
 @Analysis: 4 0
-+0 0 1 0 0 0 3 0 0 0 1
++0 0 1 0 0 0 1 0 0 0 1
 +0 "" 
 +1 "" 
 +2 "" 
@@ -61,7 +61,7 @@ Notes=
 LoadFile 0 "" 
 SaveFile 0 "" 
 @End Analysis
-@Analysis: 5 0
+@Analysis: 5 1
 +2 1
 +0 "I2" 
 +1 "" 

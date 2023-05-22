@@ -1,0 +1,64 @@
+
+**** 02/19/16 14:05:27 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\USERS\LABO\DESKTOP\ELEC-H402\CAO\ampi-PSpiceFiles\SCHEMATIC1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ald.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN VDD 0 2.5 0.5 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPI
+V_V1         VDD 0 2.5V
+V_V2         0 VSS 2.5V
+M_M1         N00263 N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+M_M2         VDD N00263 VSS VSS ncg  
++ L=7.8E-6  
++ W=0.069E-3  
++ AD=0.161E-8  
++ AS=0.603E-8   
++ PS=0.478E-3  
++ NRD=0.3  
++ NRS=1  
++ NRG=25  
++ NRB=35 
+I_I1         VDD N00263 DC 90uA  
+
+**** RESUMING bias.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device VDD is undefined
+

@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-dc"  [ C:\Users\Labo\Desktop\ELEC-H402 labo 4 avec simulations\Ampli SC CMOS\ampli sc cmos-pspicefiles\schematic1\dc.sim ] 
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/Labo/Desktop/ELEC-H402/Libraries for ELEC-H402/ALD.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 1G
+.STEP LIN V_V4 2.5 3 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

@@ -1,5 +1,5 @@
 
-**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 11:20:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
 
@@ -27,9 +27,10 @@
 .LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
 + "" 
 * From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
-.lib "nomd.lib" 
 
 *Analysis directives: 
+.DC LIN V_Vd -5 5 0.01 
+.STEP DEC I_I2 10u 10m 10 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -42,7 +43,7 @@ V_Val+         VDD 0 5
 V_V2         0 VSS 5
 I_I2         N19717 VSS DC 500u  
 V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
-V_Vcm         IN- 0 DC 0Vdc AC 0Vac 
+V_Vcm         IN- 0 DC 0Vdc AC 1Vac 
 M_M4         OUT N19154 VDD VDD pcg  
 + L=7.8E-6  
 + W=0.138E-3  
@@ -87,7 +88,7 @@ M_M3         N19154 N19154 VDD VDD pcg
 **** RESUMING AmpliDiff.cir ****
 .END
 
-**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 11:20:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
 
@@ -146,54 +147,23 @@ M_M3         N19154 N19154 VDD VDD pcg
          VDD    5               5            
        XPART    0               0            
 
-
-**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
-
-
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(  IN+)    0.0000  (  IN-)    0.0000  (  OUT)    2.7355  (  VDD)    5.0000      
-
-(  VSS)   -5.0000  (N19154)    2.7355 (N19717)   -1.8909 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_Val+      -5.000E-04
-    V_V2        -5.000E-04
-    V_Vd         0.000E+00
-    V_Vcm        0.000E+00
-
-    TOTAL POWER DISSIPATION   5.00E-03  WATTS
-
 
 
           JOB CONCLUDED
 
-**** 04/21/23 11:22:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 11:20:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AmpliDiff"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 4 - projets\AmpliDi
 
 
  ****     JOB STATISTICS SUMMARY
 
+ ****     CURRENT STEP                     I_I2 =     .01  
+
 
 ******************************************************************************
 
 
 
-  Total job time (using Solver 1)   =         .03
+  Total job time (using Solver 1)   =         .56
 

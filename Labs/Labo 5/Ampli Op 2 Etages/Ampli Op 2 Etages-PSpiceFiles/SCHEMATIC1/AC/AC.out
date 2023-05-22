@@ -1,5 +1,5 @@
-
-**** 05/05/23 10:34:48 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+**** 05/21/23 21:18:27 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AC"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 5\Ampli Op 2 Etages\ampli 
 
@@ -128,12 +128,12 @@ M_M9         N28334 N28334 VSS VSS ncg
 V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
 V_Vcm         IN- 0 DC 0Vdc AC 1Vac 
 R_RL         0 OUT2  {RL} TC=0,0 
-.PARAM  rl=100meg
+.PARAM  rl=1meg
 
 **** RESUMING AC.cir ****
 .END
 
-**** 05/05/23 10:34:48 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 21:18:27 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AC"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 5\Ampli Op 2 Etages\ampli 
 
@@ -193,7 +193,7 @@ R_RL         0 OUT2  {RL} TC=0,0
        XPART    0               0            
 
 
-**** 05/05/23 10:34:48 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 21:18:27 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AC"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 5\Ampli Op 2 Etages\ampli 
 
@@ -210,7 +210,7 @@ R_RL         0 OUT2  {RL} TC=0,0
 
 (  IN+)    0.0000  (  IN-)    0.0000  (  VDD)    5.0000  (  VSS)   -5.0000      
 
-( OUT1)    2.7208  ( OUT2)     .8197  (N00263)   -2.5326 (N00555)   -1.9023     
+( OUT1)    2.7208  ( OUT2)     .7224  (N00263)   -2.5326 (N00555)   -1.9023     
 
 (N01628)    2.7208 (N28334)   -3.0941 
 
@@ -221,7 +221,7 @@ R_RL         0 OUT2  {RL} TC=0,0
     NAME         CURRENT
 
     V_VDD       -1.513E-03
-    V_VSS       -1.513E-03
+    V_VSS       -1.512E-03
     V_Vd         0.000E+00
     V_Vcm        0.000E+00
 
@@ -231,7 +231,7 @@ R_RL         0 OUT2  {RL} TC=0,0
 
           JOB CONCLUDED
 
-**** 05/05/23 10:34:48 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+**** 05/21/23 21:18:27 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-AC"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Labo 5\Ampli Op 2 Etages\ampli 
 

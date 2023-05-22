@@ -1,0 +1,7 @@
+.SUBCKT blackbox in out
+C_C1         in N14422  100p  TC=0,0 
+C_C2         0 out  10n  TC=0,0 
+R_R1         N14422 out  10k TC=0,0 
+R_R2         0 out  100 TC=0,0 
+.ENDS
+.END

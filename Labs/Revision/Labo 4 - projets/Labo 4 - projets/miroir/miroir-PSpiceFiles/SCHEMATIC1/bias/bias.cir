@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-bias"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Revision\Labo 4 - projets\Labo 4 - projets\miroir\miroir-pspicefiles\schematic1\bias.sim ] 
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
++ "" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+
+*Analysis directives: 
+.DC LIN PARAM RD1 1k 20k 100 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

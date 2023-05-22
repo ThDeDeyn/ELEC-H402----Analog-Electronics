@@ -15,9 +15,10 @@
 .LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
 + "" 
 * From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
-.lib "nomd.lib" 
 
 *Analysis directives: 
+.DC LIN V_Vd -5 5 0.01 
+.STEP DEC I_I2 10u 10m 10 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 

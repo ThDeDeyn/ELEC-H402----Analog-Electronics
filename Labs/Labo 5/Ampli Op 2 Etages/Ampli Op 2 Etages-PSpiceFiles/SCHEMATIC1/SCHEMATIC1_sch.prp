@@ -39,53 +39,53 @@
                     ("value"	"1.239mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -98,53 +98,53 @@
                     ("value"	"1.576mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -161,37 +161,37 @@
                     ("value"	"3.783mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
                 )
                 ("TC1"
                     ("value"	"0")
                     ("pspice_param"	"TC1")
                 )
-                ("TC2"
-                    ("value"	"0")
-                    ("pspice_param"	"TC2")
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
                 )
             )
         )
@@ -204,53 +204,53 @@
                     ("value"	"1.176mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -263,53 +263,53 @@
                     ("value"	"1.176mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -322,53 +322,53 @@
                     ("value"	"579.9uW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
-                )
-                ("W"
-                    ("value"	"0.138E-3")
-                    ("pspice_param"	"W")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("PS"
-                    ("value"	"0.478E-6")
-                    ("pspice_param"	"PS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
+                ("MODEL"
+                    ("value"	"pcg")
+                    ("pspice_param"	"MODEL")
                 )
                 ("M"
                     ("value"	"")
                     ("pspice_param"	"M")
                 )
-                ("MODEL"
-                    ("value"	"pcg")
-                    ("pspice_param"	"MODEL")
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("PS"
+                    ("value"	"0.478E-6")
+                    ("pspice_param"	"PS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("W"
+                    ("value"	"0.138E-3")
+                    ("pspice_param"	"W")
+                )
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
             )
         )
@@ -381,53 +381,53 @@
                     ("value"	"579.9uW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
-                )
-                ("W"
-                    ("value"	"0.138E-3")
-                    ("pspice_param"	"W")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("PS"
-                    ("value"	"0.478E-6")
-                    ("pspice_param"	"PS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
+                ("MODEL"
+                    ("value"	"pcg")
+                    ("pspice_param"	"MODEL")
                 )
                 ("M"
                     ("value"	"")
                     ("pspice_param"	"M")
                 )
-                ("MODEL"
-                    ("value"	"pcg")
-                    ("pspice_param"	"MODEL")
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("PS"
+                    ("value"	"0.478E-6")
+                    ("pspice_param"	"PS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("W"
+                    ("value"	"0.138E-3")
+                    ("pspice_param"	"W")
+                )
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
             )
         )
@@ -440,53 +440,53 @@
                     ("value"	"1.519mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -495,57 +495,57 @@
             ("pspice_path"	"M_M8")
             ("level"	"0")
             ("model_params"
-                ("BiasValue Power"
-                    ("value"	"1.091mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
                 ("W"
                     ("value"	"{0.138E-3}")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("BiasValue Power"
+                    ("value"	"1.091mW")
+                    ("pspice_param"	"BiasValue Power")
                 )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("PS"
-                    ("value"	"0.478E-6")
-                    ("pspice_param"	"PS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
+                ("MODEL"
+                    ("value"	"pcg")
+                    ("pspice_param"	"MODEL")
                 )
                 ("M"
                     ("value"	"")
                     ("pspice_param"	"M")
                 )
-                ("MODEL"
-                    ("value"	"pcg")
-                    ("pspice_param"	"MODEL")
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("PS"
+                    ("value"	"0.478E-6")
+                    ("pspice_param"	"PS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
             )
         )
@@ -562,37 +562,37 @@
                     ("value"	"1.950mW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
                 )
                 ("TC1"
                     ("value"	"0")
                     ("pspice_param"	"TC1")
                 )
-                ("TC2"
-                    ("value"	"0")
-                    ("pspice_param"	"TC2")
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
                 )
             )
         )
@@ -605,53 +605,53 @@
                     ("value"	"459.1uW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("MODEL"
-                    ("value"	"ncg")
-                    ("pspice_param"	"MODEL")
-                )
-                ("M"
-                    ("value"	"")
-                    ("pspice_param"	"M")
-                )
-                ("NRB"
-                    ("value"	"35")
-                    ("pspice_param"	"NRB")
-                )
-                ("NRG"
-                    ("value"	"25")
-                    ("pspice_param"	"NRG")
-                )
-                ("NRS"
-                    ("value"	"1")
-                    ("pspice_param"	"NRS")
-                )
-                ("NRD"
-                    ("value"	"0.3")
-                    ("pspice_param"	"NRD")
-                )
-                ("PS"
-                    ("value"	"0.478E-3")
-                    ("pspice_param"	"PS")
-                )
-                ("PD"
-                    ("value"	"")
-                    ("pspice_param"	"PD")
-                )
-                ("AS"
-                    ("value"	"0.603E-8")
-                    ("pspice_param"	"AS")
-                )
-                ("AD"
-                    ("value"	"0.161E-8")
-                    ("pspice_param"	"AD")
+                ("L"
+                    ("value"	"7.8E-6")
+                    ("pspice_param"	"L")
                 )
                 ("W"
                     ("value"	"0.069E-3")
                     ("pspice_param"	"W")
                 )
-                ("L"
-                    ("value"	"7.8E-6")
-                    ("pspice_param"	"L")
+                ("AD"
+                    ("value"	"0.161E-8")
+                    ("pspice_param"	"AD")
+                )
+                ("AS"
+                    ("value"	"0.603E-8")
+                    ("pspice_param"	"AS")
+                )
+                ("PD"
+                    ("value"	"")
+                    ("pspice_param"	"PD")
+                )
+                ("PS"
+                    ("value"	"0.478E-3")
+                    ("pspice_param"	"PS")
+                )
+                ("NRD"
+                    ("value"	"0.3")
+                    ("pspice_param"	"NRD")
+                )
+                ("NRS"
+                    ("value"	"1")
+                    ("pspice_param"	"NRS")
+                )
+                ("NRG"
+                    ("value"	"25")
+                    ("pspice_param"	"NRG")
+                )
+                ("NRB"
+                    ("value"	"35")
+                    ("pspice_param"	"NRB")
+                )
+                ("M"
+                    ("value"	"")
+                    ("pspice_param"	"M")
+                )
+                ("MODEL"
+                    ("value"	"ncg")
+                    ("pspice_param"	"MODEL")
                 )
             )
         )
@@ -714,37 +714,37 @@
                     ("value"	"6.719nW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
                 )
                 ("TC1"
                     ("value"	"0")
                     ("pspice_param"	"TC1")
                 )
-                ("TC2"
-                    ("value"	"0")
-                    ("pspice_param"	"TC2")
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
                 )
             )
         )
@@ -754,7 +754,7 @@
             ("level"	"0")
             ("model_params"
                 ("rl"
-                    ("value"	"100meg")
+                    ("value"	"1meg")
                     ("pspice_param"	"rl")
                 )
             )

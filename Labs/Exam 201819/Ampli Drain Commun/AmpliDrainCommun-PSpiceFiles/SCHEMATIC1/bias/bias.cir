@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC1-bias"  [ D:\PM\DOCUMENTS PM\COURS\_ANALOGIQUE\ELEC-H-402 2011-2012\LABOS\Labo4 MOS2\Ampli Drain Commun\amplidraincommun-pspicefiles\schematic1\bias.sim ] 
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/pm/Documents PM/Cours/_Analogique/ELEC-H-402 2011-2012/Labos/Labo H402 PSpice Lib/small_signal.lib" 
+* From [PSPICE NETLIST] section of E:\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

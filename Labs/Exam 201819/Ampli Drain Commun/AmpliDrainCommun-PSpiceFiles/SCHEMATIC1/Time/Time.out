@@ -1,0 +1,162 @@
+
+**** 05/21/23 22:14:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Exam 201819\Ampli Drain Commu
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
++ "" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SMALL_S"
++ "IGNAL.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ELEC-H4"
++ "02.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/blackbo"
++ "x.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SEDRA_L"
++ "IB.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+
+*Analysis directives: 
+.AC DEC 100 1 1g
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDRAINCOMMUN
+M_M1         VDD N19598 N194372 N19666 NMOS5P0  
++ L=2u  
++ W=25u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+V_V1         VDD 0 12Vdc
+R_R1         0 N194372  100 TC=0,0 
+R_R2         0 N19598  2k TC=0,0 
+R_R3         N19598 VDD  1k TC=0,0 
+C_C1         N19833 N19598  1n  TC=0,0 
+V_V2         N19833 0  AC 1
++SIN 0V 0V 60 0 0 0
+X_U1         N200160 BLACKBOXOUT blackbox
+V_V3         N200160 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING Time.cir ****
+.END
+
+**** 05/21/23 22:14:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Exam 201819\Ampli Drain Commu
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS5P0         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+          LD  700.000000E-09 
+         VTO    1            
+          KP   30.468920E-06 
+       GAMMA    1.4          
+         PHI     .7          
+      LAMBDA     .01         
+          IS   10.000000E-15 
+          JS    1.000000E-06 
+          PB     .7          
+        PBSW     .7          
+          CJ  400.000000E-06 
+        CJSW  800.000000E-12 
+        MJSW     .5          
+        CGSO  400.000000E-12 
+        CGDO  400.000000E-12 
+        CGBO  200.000000E-12 
+         TOX   85.000000E-09 
+          XJ    0            
+          UO  750            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 05/21/23 22:14:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Exam 201819\Ampli Drain Commu
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VDD)   12.0000  (N19598)    8.0000 (N19666)    2.3936 (N19833)    0.0000     
+
+(N194372)    1.9929                   (N200160)    0.0000                       
+
+(BLACKBOXOUT)    0.0000               (X_U1.N14422)    0.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.393E-02
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.87E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/21/23 22:14:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Exam 201819\Ampli Drain Commu
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

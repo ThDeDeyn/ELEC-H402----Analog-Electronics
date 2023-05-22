@@ -96,4 +96,4 @@ M_M9         N28334 N28334 VSS VSS ncg
 V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
 V_Vcm         IN- 0 DC 0Vdc AC 1Vac 
 R_RL         0 OUT2  {RL} TC=0,0 
-.PARAM  rl=100meg
+.PARAM  rl=1meg

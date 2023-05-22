@@ -1,0 +1,60 @@
+
+**** 05/21/23 21:52:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Polytech\MA1 2022-2023 ULB\Q2\ELEC-H402 -- Analog Electronics\Labs\Exam 201819\Ampli Drain Commu
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ALD.lib"
++ "" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SMALL_S"
++ "IGNAL.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/ELEC-H4"
++ "02.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/blackbo"
++ "x.lib" 
+.LIB "D:/Polytech/MA1 2022-2023 ULB/Q2/ELEC-H402 -- Analog Electronics/Labs/Libraries for ELEC-H402/Libraries for ELEC-H402/SEDRA_L"
++ "IB.lib" 
+* From [PSPICE NETLIST] section of C:\Users\thoma\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+
+*Analysis directives: 
+.DC LIN VGS 0 12 .001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLIDRAINCOMMUN
+M_M1         VDD N19598 N194372 N19666 NMOS5P0  
++ L=2u  
++ W=25u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+V_V1         VDD 0 12Vdc
+R_R1         0 N194372  100 TC=0,0 
+V_V2         N19598 0 0Vdc
+
+**** RESUMING Time.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device VGS is undefined
+

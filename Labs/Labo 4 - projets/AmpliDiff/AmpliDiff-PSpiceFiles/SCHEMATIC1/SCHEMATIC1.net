@@ -3,7 +3,7 @@ V_Val+         VDD 0 5
 V_V2         0 VSS 5
 I_I2         N19717 VSS DC 500u  
 V_Vd         IN+ IN- DC 0Vdc AC 0Vac 
-V_Vcm         IN- 0 DC 0Vdc AC 0Vac 
+V_Vcm         IN- 0 DC 0Vdc AC 1Vac 
 M_M4         OUT N19154 VDD VDD pcg  
 + L=7.8E-6  
 + W=0.138E-3  

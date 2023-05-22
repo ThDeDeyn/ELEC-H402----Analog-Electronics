@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-AmpliDiff"  [ C:\Users\Labo\Desktop\ELEC-H402 labo 4 avec simulations\AmpliDiff\AmpliDiff-PSpiceFiles\SCHEMATIC1\AmpliDiff.sim ] 
+
+** Creating circuit file "AmpliDiff.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/Labo/Desktop/ELEC-H402/Libraries for ELEC-H402/ALD.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_Vd -5 5 0.01 
+.STEP DEC I_I2 10u 10m 10 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

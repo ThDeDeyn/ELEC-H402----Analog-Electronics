@@ -1,0 +1,68 @@
+
+**** 04/02/15 10:27:03 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\labo\Desktop\Labo 5 MOS3\Ampli SC CMOS\ampli sc cmos-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "C:\OrCAD\OrCAD_16.3_Demo\tools\pspice\library\SMALL_SIGNAL.lib" 
+.lib "C:\OrCAD\OrCAD_16.3_Demo\tools\pspice\library\ELEC-H402.lib" 
+.lib "C:\OrCAD\OrCAD_16.3_Demo\tools\pspice\library\SEDRA_LIB.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMPLI SC CMOS
+V_V1         VDD 0 +2.5
+V_V2         0 VSS +2.5
+R_RD1         N23093 VDD  37k TC=0,0 
+M_M2         OUT N23093 VSS VSS NMOS0P5  
++ L=0.8u  
++ W=10u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+M_M1         N23093 N23093 VSS VSS NMOS0P5  
++ L=0.8u  
++ W=10u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25E-6  
++ PS=5.25E-6      
++ M=1
+M_M3         OUT IN VDD VDD PMOS0P5  
++ L=0.8u  
++ W=40u  
++ AD=1.72E-12  
++ AS=1.72E-12  
++ PD=5.25e-6  
++ PS=5.25E-6      
++ M=1
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR -- Less than 2 connections at node IN
+ERROR -- Node IN is floating
